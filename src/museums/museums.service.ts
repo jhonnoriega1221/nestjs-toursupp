@@ -1,11 +1,19 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
 import { CreateMuseumDto } from './dto/create-museum.dto';
 import { UpdateMuseumDto } from './dto/update-museum.dto';
+import { MuseumsModule } from './museums.module';
+import { Museum, MuseumDocument } from './schema/museums.schema';
+import { Model } from 'mongoose';
 
 @Injectable()
 export class MuseumsService {
-  create(createMuseumDto: CreateMuseumDto) {
-    return 'This action adds a new museum';
+
+  constructor(@InjectModel(Museum.name) private museumsModule:Model<MuseumDocument> ){}
+
+  async create(createMuseumDto: CreateMuseumDto) {
+    const museumCreated = await this.museumsModule.create(createMuseumDto);
+    return museumCreated;
   }
 
   findAll() {
