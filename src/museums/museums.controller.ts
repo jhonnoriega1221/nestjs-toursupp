@@ -6,11 +6,11 @@ import { UpdateMuseumDto } from './dto/update-museum.dto';
 @Controller('museums')
 export class MuseumsController {
   constructor(private readonly museumsService: MuseumsService) {}
-
+  
   @Post()
   create(@Body() createMuseumDto: CreateMuseumDto) {
     return this.museumsService.create(createMuseumDto);
-  }
+  } 
 
   @Get()
   findAll() {

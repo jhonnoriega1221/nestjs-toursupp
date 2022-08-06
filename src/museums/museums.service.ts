@@ -8,16 +8,15 @@ import { Model } from 'mongoose';
 
 @Injectable()
 export class MuseumsService {
-
   constructor(@InjectModel(Museum.name) private museumsModule:Model<MuseumDocument> ){}
 
-  async create(createMuseumDto: CreateMuseumDto) {
+  async create(createMuseumDto: CreateMuseumDto): Promise<Museum> {
     const museumCreated = await this.museumsModule.create(createMuseumDto);
     return museumCreated;
   }
 
-  findAll() {
-    return `This action returns all museums`;
+  async findAll() {
+    return this.museumsModule.find();
   }
 
   findOne(id: number) {

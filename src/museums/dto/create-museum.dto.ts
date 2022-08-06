@@ -1,1 +1,3 @@
-export class CreateMuseumDto {}
+export class CreateMuseumDto {
+    name: string;
+}

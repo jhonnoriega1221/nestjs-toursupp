@@ -4,12 +4,18 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MuseumsModule } from './museums/museums.module';
+import { BeachesModule } from './beaches/beaches.module';
+import { TaxiPricesModule } from './taxi-prices/taxi-prices.module';
+import { TouristProductsModule } from './tourist-products/tourist-products.module';
 
 @Module({
   imports: [
     MuseumsModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.namgh.mongodb.net/?retryWrites=true&w=majority`)],
+    MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.namgh.mongodb.net/toursupp-db?retryWrites=true&w=majority`),
+    BeachesModule,
+    TaxiPricesModule,
+    TouristProductsModule],
   controllers: [AppController],
   providers: [AppService],
 })
