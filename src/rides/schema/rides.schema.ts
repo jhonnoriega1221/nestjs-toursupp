@@ -2,7 +2,10 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 export type RideDocument = Ride & Document;
-
+class RouteID {
+    @Prop()
+    $oid: string;
+}
 class Duration {
     @Prop()
     start: number;
@@ -14,6 +17,14 @@ class Duration {
     time: string;
 }
 
+class Location {
+    @Prop()
+    lat: string;
+
+    @Prop()
+    lon: string;
+}
+
 class Place {
     @Prop()
     name: string;
@@ -23,19 +34,6 @@ class Place {
 
     @Prop()
     location: Location;
-}
-
-class Location {
-    @Prop()
-    lat: string;
-
-    @Prop()
-    lon: string;
-}
-
-class RouteID {
-    @Prop()
-    $oid: string;
 }
 
 @Schema()
