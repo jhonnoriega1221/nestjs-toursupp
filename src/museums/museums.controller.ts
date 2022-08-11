@@ -19,7 +19,7 @@ export class MuseumsController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.museumsService.findOne(+id);
+    return this.museumsService.findOne(id);
   }
 
   @Patch(':id')

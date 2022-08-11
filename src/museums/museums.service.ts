@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { CreateMuseumDto } from './dto/create-museum.dto';
 import { UpdateMuseumDto } from './dto/update-museum.dto';
@@ -19,8 +19,12 @@ export class MuseumsService {
     return this.museumsModule.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} museum`;
+  async findOne(id: string) {
+    const museum = await this.museumsModule.findById(id);
+    if(!museum) {
+      throw new NotFoundException(`Student ${id} not found`);
+    }
+    return museum;
   }
 
   update(id: number, updateMuseumDto: UpdateMuseumDto) {
