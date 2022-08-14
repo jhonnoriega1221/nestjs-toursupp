@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { BeachesModule } from './beaches.module';
 import { CreateBeachDto } from './dto/create-beach.dto';
@@ -15,12 +15,16 @@ export class BeachesService {
     return beachCreated;
   }
 
-  findAll() {
+  async findAll() {
     return this.beachesModule.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} beach`;
+  async findOne(id: string) {
+    const beach = await this.beachesModule.findById(id);
+    if(!beach) {
+      throw new NotFoundException(`Student ${id} not found`);
+    }
+    return beach;
   }
 
   update(id: number, updateBeachDto: UpdateBeachDto) {

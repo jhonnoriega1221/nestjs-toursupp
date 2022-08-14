@@ -18,7 +18,7 @@ export class BeachesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.beachesService.findOne(+id);
+    return this.beachesService.findOne(id);
   }
 
   @Patch(':id')
