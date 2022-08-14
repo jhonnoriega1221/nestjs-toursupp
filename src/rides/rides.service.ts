@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateRideDto } from './dto/create-ride.dto';
 import { UpdateRideDto } from './dto/update-ride.dto';
 import { InjectModel } from '@nestjs/mongoose';
@@ -19,8 +19,12 @@ export class RidesService {
     return this.ridesModule.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} ride`;
+  async findOne(id: string) {
+    const ride = await this.ridesModule.findById(id);
+    if(!ride) {
+      throw new NotFoundException(`Ride ${id} not found`);
+    }
+    return ride;
   }
 
   update(id: number, updateRideDto: UpdateRideDto) {
