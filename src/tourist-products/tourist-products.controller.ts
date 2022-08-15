@@ -19,7 +19,7 @@ export class TouristProductsController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.touristProductsService.findOne(+id);
+    return this.touristProductsService.findOne(id);
   }
 
   @Patch(':id')
