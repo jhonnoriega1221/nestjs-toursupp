@@ -21,8 +21,8 @@ export class MuseumsService {
 
   async findOne(id: string) {
     const museum = await this.museumsModule.findById(id);
-    if(!museum) {
-      throw new NotFoundException(`Student ${id} not found`);
+    if(!museum) { 
+      throw new NotFoundException(`Museum ${id} not found`);
     }
     return museum;
   }
