@@ -9,6 +9,7 @@ import { TaxiPricesModule } from './taxi-prices/taxi-prices.module';
 import { TouristProductsModule } from './tourist-products/tourist-products.module';
 import { RidesModule } from './rides/rides.module';
 import { RoutesModule } from './routes/routes.module';
+import { FoodsModule } from './foods/foods.module';
 
 @Module({
   imports: [
@@ -19,7 +20,8 @@ import { RoutesModule } from './routes/routes.module';
     TaxiPricesModule,
     TouristProductsModule,
     RidesModule,
-    RoutesModule],
+    RoutesModule,
+    FoodsModule],
   controllers: [AppController],
   providers: [AppService],
 })
