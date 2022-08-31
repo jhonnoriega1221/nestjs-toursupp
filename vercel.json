@@ -1,6 +1,6 @@
 {
-    "version": 2,
-    "name": "blog-server",
+    "version": 0.2,
+    "name": "toursupp",
     "builds": [
         {
             "src": "dist/main.js",
