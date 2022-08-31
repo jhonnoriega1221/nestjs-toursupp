@@ -10,11 +10,16 @@ import { TouristProductsModule } from './tourist-products/tourist-products.modul
 import { RidesModule } from './rides/rides.module';
 import { RoutesModule } from './routes/routes.module';
 import { FoodsModule } from './foods/foods.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
     MuseumsModule,
     ConfigModule.forRoot(),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'front')
+    }),
     MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.namgh.mongodb.net/toursupp-db?retryWrites=true&w=majority`),
     BeachesModule,
     TaxiPricesModule,
