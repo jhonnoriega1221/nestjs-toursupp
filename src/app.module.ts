@@ -12,6 +12,7 @@ import { RoutesModule } from './routes/routes.module';
 import { FoodsModule } from './foods/foods.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { CustomerFeedbackModule } from './customer-feedback/customer-feedback.module';
 
 @Module({
   imports: [
@@ -26,7 +27,8 @@ import { join } from 'path';
     TouristProductsModule,
     RidesModule,
     RoutesModule,
-    FoodsModule],
+    FoodsModule,
+    CustomerFeedbackModule],
   controllers: [AppController],
   providers: [AppService],
 })

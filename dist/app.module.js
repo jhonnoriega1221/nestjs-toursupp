@@ -21,6 +21,7 @@ const routes_module_1 = require("./routes/routes.module");
 const foods_module_1 = require("./foods/foods.module");
 const serve_static_1 = require("@nestjs/serve-static");
 const path_1 = require("path");
+const customer_feedback_module_1 = require("./customer-feedback/customer-feedback.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -37,7 +38,8 @@ AppModule = __decorate([
             tourist_products_module_1.TouristProductsModule,
             rides_module_1.RidesModule,
             routes_module_1.RoutesModule,
-            foods_module_1.FoodsModule
+            foods_module_1.FoodsModule,
+            customer_feedback_module_1.CustomerFeedbackModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
