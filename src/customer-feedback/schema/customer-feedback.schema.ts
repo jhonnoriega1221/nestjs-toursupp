@@ -3,6 +3,14 @@ import { Document } from 'mongoose';
 
 export type CustomerFeedbackDocument = CustomerFeedback & Document;
 
+class Location {
+    @Prop()
+    lat:string;
+
+    @Prop()
+    lon:string;
+}
+
 @Schema()
 export class CustomerFeedback {
     @Prop()
@@ -22,6 +30,12 @@ export class CustomerFeedback {
 
     @Prop()
     textarea: string;
+
+    @Prop()
+    location: Location;
+
+    @Prop()
+    submitDate: Date;
 }
 
 export const CustomerFeedbackSchema = SchemaFactory.createForClass(CustomerFeedback);

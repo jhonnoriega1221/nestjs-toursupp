@@ -11,6 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateCustomerFeedbackDto = void 0;
 const class_validator_1 = require("class-validator");
+class Location {
+}
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", String)
+], Location.prototype, "lat", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", String)
+], Location.prototype, "lon", void 0);
 class CreateCustomerFeedbackDto {
 }
 __decorate([
@@ -43,5 +55,14 @@ __decorate([
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], CreateCustomerFeedbackDto.prototype, "textarea", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", Location)
+], CreateCustomerFeedbackDto.prototype, "location", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", String)
+], CreateCustomerFeedbackDto.prototype, "submitDate", void 0);
 exports.CreateCustomerFeedbackDto = CreateCustomerFeedbackDto;
 //# sourceMappingURL=create-customer-feedback.dto.js.map

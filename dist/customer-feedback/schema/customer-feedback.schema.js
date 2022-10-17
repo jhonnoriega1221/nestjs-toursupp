@@ -11,6 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomerFeedbackSchema = exports.CustomerFeedback = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
+class Location {
+}
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], Location.prototype, "lat", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], Location.prototype, "lon", void 0);
 let CustomerFeedback = class CustomerFeedback {
 };
 __decorate([
@@ -37,6 +47,14 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], CustomerFeedback.prototype, "textarea", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Location)
+], CustomerFeedback.prototype, "location", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Date)
+], CustomerFeedback.prototype, "submitDate", void 0);
 CustomerFeedback = __decorate([
     (0, mongoose_1.Schema)()
 ], CustomerFeedback);

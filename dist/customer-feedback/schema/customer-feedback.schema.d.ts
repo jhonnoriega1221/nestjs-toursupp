@@ -24,6 +24,10 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Document } from 'mongoose';
 export declare type CustomerFeedbackDocument = CustomerFeedback & Document;
+declare class Location {
+    lat: string;
+    lon: string;
+}
 export declare class CustomerFeedback {
     answer1: string;
     answer2: string;
@@ -31,5 +35,8 @@ export declare class CustomerFeedback {
     answer4: string;
     answer5: string;
     textarea: string;
+    location: Location;
+    submitDate: Date;
 }
 export declare const CustomerFeedbackSchema: import("mongoose").Schema<CustomerFeedback, import("mongoose").Model<CustomerFeedback, any, any, any, any>, {}, {}, {}, {}, "type", CustomerFeedback>;
+export {};

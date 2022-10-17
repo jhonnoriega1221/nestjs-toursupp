@@ -1,5 +1,15 @@
 import { IsNotEmpty, IsString } from "class-validator";
 
+class Location {
+	@IsString()
+	@IsNotEmpty()
+	lat:string;
+
+	@IsString()
+	@IsNotEmpty()
+	lon:string;
+}
+
 export class CreateCustomerFeedbackDto {
 
 	@IsString()
@@ -25,4 +35,11 @@ export class CreateCustomerFeedbackDto {
 	@IsString()
 	@IsNotEmpty()
 	textarea:string;
+
+	@IsNotEmpty()
+	location:Location;
+
+	@IsString()
+	@IsNotEmpty()
+	submitDate:string;
 }
