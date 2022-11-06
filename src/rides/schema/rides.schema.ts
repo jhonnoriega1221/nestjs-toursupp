@@ -48,7 +48,7 @@ export class Ride {
     description: string;
 
     @Prop()
-    price: number;
+    price: string;
 
     @Prop()
     duration: Duration;

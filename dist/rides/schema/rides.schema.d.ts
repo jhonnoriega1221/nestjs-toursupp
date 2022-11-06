@@ -45,7 +45,7 @@ export declare class Ride {
     name: string;
     type: string;
     description: string;
-    price: number;
+    price: string;
     duration: Duration;
     places: Place[];
     route_id: RouteID;
