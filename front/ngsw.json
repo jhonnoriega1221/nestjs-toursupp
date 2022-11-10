@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1668106316197,
+  "timestamp": 1668123883713,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -245,13 +245,13 @@
     "/assets/brand-logo.svg": "c6957646bbd6b1610c9652d58c077533be6a1317",
     "/assets/click_marker.png": "34fdcf7a89c39e50f7f310d947ab8fae2b6bf4b7",
     "/assets/happy-face.svg": "fca0cb9a413c1414e7c177f3dfd69e8708ee793e",
-    "/assets/i18n/en.json": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "/assets/i18n/es.json": "0966666e11541a5bd73d4cda7a823708769c1aad",
-    "/assets/i18n/fr.json": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "/assets/i18n/ge.json": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "/assets/i18n/it.json": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "/assets/i18n/jp.json": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "/assets/i18n/pr.json": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/assets/i18n/en.json": "4ca35e4d2aa990a1693dd9301058494bf376646b",
+    "/assets/i18n/es.json": "abdc19d16bde7f681a5c3ccde911ca791c291190",
+    "/assets/i18n/fr.json": "5674e7458b98049bf030f07f7c3131eab9152aff",
+    "/assets/i18n/ge.json": "e717821a9a0f09b045a02f41b9d570071aa3c474",
+    "/assets/i18n/it.json": "c7fe10e3143b5326711ccc934def1621591cb56a",
+    "/assets/i18n/jp.json": "e344b98495997698ede5596bea2b50562b8ebe62",
+    "/assets/i18n/pr.json": "295b0bd425414d3153746f33f0b72ac51fdc8045",
     "/assets/icons/android/android-launchericon-144-144.png": "81758a4d56f18c3e98eeff9aab56dcb9defd64df",
     "/assets/icons/android/android-launchericon-192-192.png": "98fde0374cfaf227ff22e30471f32531c0b3f913",
     "/assets/icons/android/android-launchericon-48-48.png": "898810174abee473c3a7968a9979276fe1e0e02c",
