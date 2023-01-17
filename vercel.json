@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "toursupp",
+    "name": "api-toursupp",
     "builds": [
         {
             "src": "dist/main.js",

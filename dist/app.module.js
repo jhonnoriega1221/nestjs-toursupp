@@ -19,8 +19,6 @@ const tourist_products_module_1 = require("./tourist-products/tourist-products.m
 const rides_module_1 = require("./rides/rides.module");
 const routes_module_1 = require("./routes/routes.module");
 const foods_module_1 = require("./foods/foods.module");
-const serve_static_1 = require("@nestjs/serve-static");
-const path_1 = require("path");
 const customer_feedback_module_1 = require("./customer-feedback/customer-feedback.module");
 let AppModule = class AppModule {
 };
@@ -29,9 +27,6 @@ AppModule = __decorate([
         imports: [
             museums_module_1.MuseumsModule,
             config_1.ConfigModule.forRoot(),
-            serve_static_1.ServeStaticModule.forRoot({
-                rootPath: (0, path_1.join)(__dirname, '..', 'front')
-            }),
             mongoose_1.MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.namgh.mongodb.net/toursupp-db?retryWrites=true&w=majority`),
             beaches_module_1.BeachesModule,
             taxi_prices_module_1.TaxiPricesModule,

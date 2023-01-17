@@ -18,9 +18,6 @@ import { CustomerFeedbackModule } from './customer-feedback/customer-feedback.mo
   imports: [
     MuseumsModule,
     ConfigModule.forRoot(),
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'front')
-    }),
     MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.namgh.mongodb.net/toursupp-db?retryWrites=true&w=majority`),
     BeachesModule,
     TaxiPricesModule,
